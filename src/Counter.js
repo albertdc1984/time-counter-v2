@@ -47,7 +47,7 @@ export default function Counter() {
           : `${Math.abs(count)} days ago was `}
         {date.toDateString()}
       </div>
-      <button onClick={resetCounter}>Reset</button>
+      {(count !== 0 || step !== 1) && <button onClick={resetCounter}>Reset</button>}
     </div>
   );
 }
